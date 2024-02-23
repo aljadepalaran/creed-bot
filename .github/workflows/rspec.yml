@@ -1,4 +1,4 @@
-name: "linting"
+name: "unit tests"
 
 on:
   push:
@@ -24,7 +24,7 @@ jobs:
     - name: install dependencies
       run: bundle install
 
-    - name: rubocop run
+    - name: run rspec
       run: |
         bash -c "
           bundle exec rubocop --require code_scanning --format CodeScanning::SarifFormatter -o rubocop.sarif

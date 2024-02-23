@@ -23,6 +23,11 @@ gem 'tzinfo-data', platforms: %i[mswin mswin64 mingw x64_mingw jruby]
 
 group :development, :test do
   gem 'debug', platforms: %i[mri mswin mswin64 mingw x64_mingw]
+  gem 'rspec-rails', '~> 6.1.0'
+end
+
+group :test do
+  gem 'simplecov', require: false
 end
 
 group :development do
