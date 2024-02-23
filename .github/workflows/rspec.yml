@@ -7,7 +7,7 @@ on:
     branches: [ 'main' ]
 
 jobs:
-  rubocop:
+  rspec:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: true
@@ -27,9 +27,7 @@ jobs:
     - name: run rspec
       run: |
         bash -c "
-          bundle exec rubocop --require code_scanning --format CodeScanning::SarifFormatter -o rubocop.sarif
-          ls -l
-          [[ $? -ne 2 ]]
+          bundle exec rspec spec
         "
 
     - name: Upload Sarif output
