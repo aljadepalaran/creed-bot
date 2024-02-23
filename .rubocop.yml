@@ -4,7 +4,7 @@ Style/Documentation:
 AllCops:
   Exclude:
     - 'bin/*'
-    - vendor/**/*.rb
+    - vendor/bundle/**/*
 
   SuggestExtensions: false
 
