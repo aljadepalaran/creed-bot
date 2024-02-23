@@ -4,6 +4,8 @@ Style/Documentation:
 AllCops:
   Exclude:
     - 'bin/*'
+    - vendor/**/*.rb
+
   SuggestExtensions: false
 
 Metrics/BlockLength:
