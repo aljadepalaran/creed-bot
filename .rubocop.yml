@@ -1,0 +1,14 @@
+Style/Documentation:
+  Enabled: false
+
+AllCops:
+  Exclude:
+    - 'bin/*'
+    - vendor/bundle/**/*
+  NewCops: enable
+
+  SuggestExtensions: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'config/*/*'
