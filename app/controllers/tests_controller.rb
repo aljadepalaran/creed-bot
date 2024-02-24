@@ -16,6 +16,20 @@ class TestsController < ApplicationController
     $bot.stop
   end
 
+  def voice_connect
+    Thread.start do
+      $bot.voice_connect(891_096_280_661_647_431)
+    end
+  end
+
+  def voice_disconnect
+    $bot.voice_destroy(351_459_276_633_669_632)
+  end
+
+  def send_message
+    $bot.send_message(855_882_840_080_121_856, params[:message])
+  end
+
   private
 
   def token
