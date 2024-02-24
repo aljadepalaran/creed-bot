@@ -6,6 +6,7 @@ ruby '3.0.0'
 gem 'rails', '~> 7.1.3', '>= 7.1.3.2'
 
 gem 'code-scanning-rubocop'
+gem 'discordrb'
 gem 'importmap-rails'
 gem 'jbuilder'
 gem 'pg', '~> 1.1'
