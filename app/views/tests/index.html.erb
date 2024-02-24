@@ -1,0 +1,28 @@
+hello world
+<%= button_to 'start bot', start_tests_path, method: :post %><br>
+<%= button_to 'stop bot', stop_tests_path, method: :post %><br>
+<%= button_to 'voice connect', voice_connect_tests_path, method: :post %><br>
+<%= button_to 'voice disconnect', voice_disconnect_tests_path, method: :post %><br>
+<h1>
+  Send Message
+</h1>
+<%= form_with url: send_message_tests_path, method: :post do |form| %>
+  <%= form.text_field :message %>
+  <%= form.submit 'send message' %>
+<% end %>
+
+<%= form_with url: set_status_tests_path, method: :post do |form| %>
+  <%= form.label 'status' %> 
+  <%= form.select :status, values: ['online', 'dnd', 'idle'] %>
+  <br>
+  <br>
+  <%= form.label 'activity' %> 
+  <%= form.text_field :activity %>
+  <br>
+  <br>
+  <%= form.label 'url' %> 
+  <%= form.text_field :url %>
+  <br>
+  <br>
+  <%= form.submit 'set status' %>
+<% end %>
