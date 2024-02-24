@@ -30,6 +30,14 @@ class TestsController < ApplicationController
     $bot.send_message(855_882_840_080_121_856, params[:message])
   end
 
+  def set_status
+    $bot.update_status(
+      params[:status],
+      params[:activity],
+      params[:url]
+    )
+  end
+
   private
 
   def token

@@ -10,3 +10,19 @@ hello world
   <%= form.text_field :message %>
   <%= form.submit 'send message' %>
 <% end %>
+
+<%= form_with url: set_status_tests_path, method: :post do |form| %>
+  <%= form.label 'status' %> 
+  <%= form.select :status, values: ['online', 'dnd', 'idle'] %>
+  <br>
+  <br>
+  <%= form.label 'activity' %> 
+  <%= form.text_field :activity %>
+  <br>
+  <br>
+  <%= form.label 'url' %> 
+  <%= form.text_field :url %>
+  <br>
+  <br>
+  <%= form.submit 'set status' %>
+<% end %>

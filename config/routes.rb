@@ -11,5 +11,9 @@ Rails.application.routes.draw do
     post 'voice_connect'
     post 'voice_disconnect'
     post 'send_message'
+    post 'set_status'
+    post 'set_game'
+    post 'set_activity'
+    post 'set_watching'
   end
 end
